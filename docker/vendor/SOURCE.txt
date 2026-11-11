@@ -1,0 +1,18 @@
+discover-0.9.6-py312h3866932_0.conda
+
+DISCOVER 0.9.6, co-occurrence and mutual exclusivity analysis. This is the unmodified conda
+package for linux-64 and Python 3.12, as published on the conda channel of its authors:
+
+  https://ccb.nki.nl/software/discover/repos/conda/linux-64/discover-0.9.6-py312h3866932_0.conda
+
+Home page: http://ccb.nki.nl/software/discover
+Author: Sander Canisius <s.canisius@nki.nl>, Netherlands Cancer Institute
+md5:    75d834c67d262dd3c8b86648ed9a9f08
+sha256: bfe7e975efa600c60173df781a933f618fc2a32c29148906c58d04bd6e23673b
+
+The image installs this copy, so the build does not download from that channel. The image
+also holds this note and the license text in /opt/env/share/licenses/discover/.
+
+License: Apache License 2.0, as stated in the package metadata (info/index.json, info/about.json
+and the METADATA file of the Python package). The package holds no copy of the license text, so
+one is given in LICENSE-Apache-2.0.txt.

@@ -1,0 +1,49 @@
+rule_id	exp	exp_set	exp_not	project	Condition_normalized	sub_species	Position	Position_set	Sequence_Change	SeqChange_set	Details	Gene	Gene_set	Gene_contains	ale_set	reason
+1								2173361;2173363;2173364		Δ2 bp;Δ1 bp						gatC region recurrent deletion
+2							257908		Δ776 bp							crl region recurrent deletion
+3							1978503		Δ776 bp							insB1/insA region recurrent deletion
+4							1299499		Δ1,199 bp							ychE/oppA region recurrent deletion
+5							3560455		+G							glpR region recurrent insertion
+6							4296381		+GC							gltP/yjcO region recurrent insertion
+7							4296380		+CG							gltP/yjcO region recurrent insertion
+9							1979486		IS5 (+) +4 bp							insA/uspC region IS5 insertion
+10			GLU				4001645		Δ5 bp							corA starting-strain deletion, tracked in GLU
+11			GLU				2132787				I204S (ATC→AGC)					wcaA starting-strain SNP, tracked in GLU
+12								4293212;4293403;4293430;4296060;4296154;4296189;4296190;4296191;4296267;4296268;4296286;4296380;4296382		+C;+G;A→C;A→G;A→T;C→A;C→T;T→C						gltP/yjcO region recurrent multi-position artifacts
+14		ROS_eAMP;OxidizeME_PQ3					1293032				intergenic (‑110/‑488)					Paraquat starting-strain hns
+15		ROS_eAMP;OxidizeME_PQ3					2132787				I204S (ATC→AGC)					Paraquat starting-strain wcaA
+16		ROS_eAMP;OxidizeME_PQ3					4001645				coding (220‑224/951 nt)					Paraquat starting-strain corA
+17		ROS_eAMP;OxidizeME_PQ3					4184543				P1100Q (CCG→CAG)					Paraquat starting-strain rpoB
+28	endpoints						147727				coding (760‑771/903 nt)					endpoints starting-strain rpnC
+29	endpoints						1143998				G124S (GGT→AGT)					endpoints starting-strain rpnC
+30	endpoints						2917345				G763G (GGG→GGA)					endpoints starting-strain barA
+31	endpoints						3566544				S13I (AGC→ATC)					endpoints starting-strain glgP
+32	MG1655-pBGT_ceftazidime						366290				D6N (GAT→AAT)					MG1655-pBGT_ceftazidime starting-strain lacZ
+33	MG1655-pBGT_ceftazidime						366300				coding (6/3075 nt)					MG1655-pBGT_ceftazidime starting-strain lacZ
+34	MG1655-pBGT_ceftazidime						366301				coding (5/3075 nt)					MG1655-pBGT_ceftazidime starting-strain lacZ
+35	MG1655-pBGT_ceftazidime													araC		MG1655-pBGT_ceftazidime starting-strain araC
+36	SER										W190* (TGG→TAG)	cyoB				SER starting-strain cyoB
+37	SER										L193Q (CTG→CAG)	eno				SER starting-strain eno
+38	SER										V133E (GTA→GAA)	chbF				SER starting-strain chbF
+39	SER										G354G (GGT→GGC)	fumC				SER starting-strain fumC
+40	SER										S683Y (TCC→TAC)	yegE				SER starting-strain yegE
+41	SER										L594F (TTG→TTC)	rcsC				SER starting-strain rcsC
+42	GYD										G354G (GGT→GGC)	fumC				GYD starting-strain fumC
+43	GYD										S683Y (TCC→TAC)	yegE				GYD starting-strain yegE
+44	GYD										L594F (TTG→TTC)	rcsC				GYD starting-strain rcsC
+45	Glycerol_2006										coding (212/552 nt)	btuE				Glycerol_2006 starting-strain btuE
+46	Glycerol_2006										coding (213/552 nt)	btuE				Glycerol_2006 starting-strain btuE
+47	Glycerol_2006										A215T (GCT→ACT)	hisC				Glycerol_2006 starting-strain hisC
+48	Glycerol_2006										Y67N (TAT→AAT)	ydaC				Glycerol_2006 starting-strain ydaC
+49		tpi;pts;pgi;sdh;gnd;evo											wcaA;corA			CCK experiments tracked starting-strain wcaA/corA
+50	MG1655_anchestor															MG1655_anchestor ancestor samples removed
+51	MG1655_chloramphenicol						4390754				A252A (GCC→GCA)					MG1655_chloramphenicol starting-strain mutation
+52	MG1655_chloramphenicol						803662				L54I (CTT→ATT)					MG1655_chloramphenicol starting-strain mutation
+53	MG1655_chloramphenicol						1905761				G25D (GGT→GAT)					MG1655_chloramphenicol starting-strain mutation
+54	MG1655_doxycycline						4390754				A252A (GCC→GCA)					MG1655_doxycycline starting-strain mutation
+55	MG1655_doxycycline						803662				L54I (CTT→ATT)					MG1655_doxycycline starting-strain mutation
+56	MG1655_doxycycline						1905761				G25D (GGT→GAT)					MG1655_doxycycline starting-strain mutation
+57	MG1655_trimethoprim						4390754				A252A (GCC→GCA)					MG1655_trimethoprim starting-strain mutation
+58	MG1655_trimethoprim						803662				L54I (CTT→ATT)					MG1655_trimethoprim starting-strain mutation
+59	MG1655_trimethoprim						1905761				G25D (GGT→GAT)					MG1655_trimethoprim starting-strain mutation
+60	GYD														34;35	GYD ALEs 34 and 35 excluded from downstream analysis

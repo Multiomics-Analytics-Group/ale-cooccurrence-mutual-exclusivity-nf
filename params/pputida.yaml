@@ -1,0 +1,7 @@
+# The P. putida run: nextflow run main.nf -params-file params/pputida.yaml -resume
+# Start Nextflow in the repository folder, since relative paths are read from the folder it is
+# started in. outdir receives qc/pputida/ and analysis/pputida/.
+qc_config: qc_pipeline/config/qc_config_pputida.yaml
+analysis_config: analysis_pipeline/config/analysis_config_pputida.yaml
+data_dir: data
+outdir: results

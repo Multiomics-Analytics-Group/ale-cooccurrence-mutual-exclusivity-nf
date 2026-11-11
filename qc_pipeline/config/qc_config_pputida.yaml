@@ -1,0 +1,150 @@
+# =====================================================================
+# ALEdb P. putida mutation data-QC pipeline configuration
+# Relative paths are read from the folder the pipeline is started in. The runner
+# (qc_pipeline/scripts/run_qc_pipeline.sh) moves to the repository folder itself.
+# Do not hard-code absolute user-local paths here.
+#
+# The code holds no default values. The pipeline stops when a setting it reads is missing,
+# has the wrong kind of value or a number out of range, or names something the data does not
+# have. A path that does not exist stops the step that reads it.
+# For none, write [] for a list, {} for a mapping, or "" where a setting allows empty text.
+# =====================================================================
+
+# Name of this run. Every output goes to output/qc/<run_name>/. Give a test, or a second
+# configuration of the same species, its own name. A finished run is never overwritten: the
+# runner stops. A folder left by a run that failed or was stopped is removed and the run
+# starts again.
+run_name: pputida
+
+# ---------------------------------------------------------------------
+# Organism selection (multi-species support). All species/subspecies
+# selection happens in step 02.
+# ---------------------------------------------------------------------
+organism:
+  species: Pseudomonas putida          # matched against the species_norm column
+  subspecies: []                       # [] = species level, or a list such as [KT2440] to filter further
+  # Subspecies and Gene_deletion_record of each deposit. "" takes the subspecies from
+  # inputs.species_normalization and adds no Gene_deletion_record column.
+  subspecies_table: ""
+
+# Folder that holds the local mutil helper package (provides get_all_sample_mut_df,
+# get_multi_exp_max_freq_mut_df, is_coding_mut, get_clean_mut_gene_list).
+mutil_dir: qc_pipeline   # vendored mutil package (qc_pipeline/mutil)
+
+# ---------------------------------------------------------------------
+# Raw / reference inputs
+# ---------------------------------------------------------------------
+inputs:
+  muts_all_dir: data/muts_all                                  # per-experiment breseq mutation CSVs
+  metadata_dir: data/metadata_all                              # per-experiment metadata CSVs
+  species_normalization: data/Species_normalization_latest.tsv   # species and subspecies of each deposit
+  condition_normalization: data/Condition_normalization_table.tsv   # condition labels, attached at step 02
+  string_aliases: data/String/160488.protein.aliases.v12.0.txt.gz   # per-species gene mapping (taxid in filename)
+
+# Pipeline-local config tables
+config_tables:
+  # Step 03 rules, one per row: a row is removed when it matches every filled field of a
+  # rule. The rules are specific to a species and its reference genome.
+  starting_strain_mutation_table: qc_pipeline/config/starting_strain_mutation_table_pputida.tsv
+  # Optional. For experiments without a "0 0 1 1" starting-strain sample. Each row is one
+  # mutation of one experiment, removed from every sample of that experiment (matched on exp,
+  # Position, Sequence Change and Details).
+  starting_strain_mutation_table_user: qc_pipeline/config/starting_strain_mutation_table_user_pputida.tsv
+  hypermutator_genes: qc_pipeline/config/hypermutator_genes.txt   # known hypermutator genes
+  # Experiments removed at step 06, one rule per row with its reason.
+  manual_experiment_exclusion: qc_pipeline/config/manual_experiment_exclusion_table_pputida.tsv
+
+# ---------------------------------------------------------------------
+# Step 01 options
+# ---------------------------------------------------------------------
+step01:
+  # ALEdb can hold several deposits (ExpIDs) under one experiment name, and the
+  # later steps tell experiments apart by name. A deposit whose mutation file has no
+  # rows is skipped. Of the others, one per name and species is loaded, with the species
+  # that inputs.species_normalization gives each deposit: the one with a DOI, then
+  # the smallest ExpID, or the one named in deposit_overrides. Deposits of different
+  # species that share a name are each loaded, and step 02 keeps one species. Names
+  # are compared exactly. A deposit that copies another one under a different name
+  # is not caught here, so list it in the manual exclusion table.
+  # Skipped deposits go to removed/01_skipped_duplicate_deposits.tsv, with the reason.
+  # Experiment name: ExpID of the deposit to load for that name, in place of the
+  # deposit picked among those of the same species.
+  deposit_overrides: {}
+
+# ---------------------------------------------------------------------
+# Step 02 options
+# ---------------------------------------------------------------------
+step02:
+  # Species/subspecies selection is driven by the organism block above.
+  # Rows whose Condition_group is listed are removed. Rows of other groups, and rows
+  # without a condition, are kept.
+  remove_condition_groups: []
+  # Columns a row must share with a row of inputs.condition_normalization to get its
+  # condition. A row without such a match takes the first condition listed for its exp, if any.
+  match_cols: [exp, doi, media_description, nitrogen_source, sulfur_source, calcium_source, supplement, temperature]
+
+# ---------------------------------------------------------------------
+# Step 03 options
+# ---------------------------------------------------------------------
+step03:
+  # A later row is removed as inherited when the starting-strain sample of its experiment has the
+  # same call: the same reference sequence, position and sequence change. Details and Gene are left
+  # out because they are annotations that can differ between samples for one call.
+  strict_key_cols: [exp, Reference Seq, Position, Sequence Change]
+  # The starting-strain sample, as "ale flask isolate tech_rep". Its own rows are removed too.
+  starting_strain_sample_label: "0 0 1 1"
+  # Rows whose Reference Seq is listed are removed.
+  drop_reference_seqs: []
+  # Exact Gene (Scrollable) values to rename, written "old": new.
+  gene_name_replacements: {}
+
+# ---------------------------------------------------------------------
+# Step 04 options
+# ---------------------------------------------------------------------
+step04:
+  # High-burden flasks are removed on the RAW mutation load (before the frequency
+  # filter), keyed on exp_ale_flask, so every flask of an ALE is checked, not only its
+  # endpoint. Running before the frequency filter is deliberate: it is the only check that
+  # sees the sub-fixation load, which is where hypermutation shows up.
+  # A flask is high-burden when it has at least this many rows, over all its samples.
+  high_mutation_count_threshold: 1000
+  # Frequency filter: a row is kept when one of its presence values is at least
+  # population_frequency_threshold.
+  population_frequency_threshold: 1.0
+  hypermutator_frequency_token: "1.00"      # presence string used to build the clonal set for hypermutator detection
+  # Rows whose gene annotation is listed are removed. Step 04 first writes the genes of a
+  # non-coding call "a, b" as "a/b", so write such a name with "/" ("–" is an en dash).
+  drop_gene_names: []
+  # After hypermutator removal, report mutations present in >= this fraction of an
+  # experiment's endpoint samples (likely starting-strain mutations) for review.
+  # Only experiments with at least high_prevalence_min_endpoints samples are considered
+  # (otherwise a single-sample experiment trivially shows 100% prevalence).
+  high_prevalence_report_threshold: 0.90
+  high_prevalence_min_endpoints: 5
+
+# ---------------------------------------------------------------------
+# Step 05 options
+# ---------------------------------------------------------------------
+step05:
+  # Rows of the listed projects (metadata column project) are removed. To exclude experiments,
+  # prefer config_tables.manual_experiment_exclusion (step 06), which records a reason for each.
+  remove_projects: []
+  # Sources of the STRING alias file that are read. Aliases from other sources are ignored.
+  string_valid_sources: [RefSeq_gene, UniProt_GN_Name, RefSeq]
+  # Of those, the sources whose alias is taken as the standard gene name.
+  string_primary_sources: [RefSeq_gene, UniProt_GN_Name]
+
+  # --- unit construction -----
+  # Intergenic mutations are always assigned to the CLOSER flanking gene (not configurable),
+  #   parsing the "intergenic (d1/d2)" distances from the Details field, so every test unit
+  #   is a gene. An intergenic call that cannot be split to one gene is removed.
+  # clean_gene_strings: strip a trailing " CDS", collapse "X|X" to "X" and drop a leading "["
+  #   and a trailing "]". Without this, rpoD and "rpoD CDS" become two units.
+  # keep_unmapped_as_annotated: keep a single-gene identifier STRING cannot name (for example a
+  #   pseudogene, an RNA gene or a locus tag of another assembly) rather than dropping the row.
+  #   An unmapped identifier that lists several genes (joined by "," or "/") is removed either way.
+  clean_gene_strings: true
+  keep_unmapped_as_annotated: true
+  # Output column name for the locus tag (read from the STRING protein id, any species).
+  # Keep "b_number" for E. coli. For other organisms set e.g. "locus_tag".
+  locus_tag_column: locus_tag

@@ -1,0 +1,71 @@
+# Known hypermutator genes (one per line, a line starting with '#' is a comment).
+# Source: 10.1016/S0966-842X(98)01424-3, synonyms from EcoCyc.
+# Used by step 04 together with the mutation-burden outlier test:
+# an ALE is removed only if it is BOTH a burden outlier AND carries a
+# coding mutation in one of these genes.
+# oxyR and hns are intentionally excluded (mutate without causing hypermutation).
+mutD
+dnaQ
+mutS
+ant
+plm
+fdv
+mutL
+mutH
+mutR
+topB
+prv
+uvrD
+uvr502
+srjC
+uvrE
+dar-2
+dda
+mutU
+pdeB
+rad
+recL
+mutM
+fpg
+mutY
+micA
+mutT
+nudA
+dnaE
+polC
+sdgC
+polA
+resA
+mutA
+glyV
+mutC
+glyW
+ins
+dam
+miaA
+trpX
+sodA
+sodB
+nth
+nei
+xthA
+xth
+nfo
+ung
+vsr
+ada
+ogt
+recA
+zab
+umuB
+tif
+lexB
+recH
+rnmB
+srf
+recG
+radC
+spoV
+ssb
+exrB
+lexC

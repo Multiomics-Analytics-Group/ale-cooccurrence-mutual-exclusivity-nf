@@ -1,0 +1,11 @@
+exp	match_type	remove	reason	notes
+JCL260__isobutanol_production_host-M9-MG1655gbk	equals	yes	Contaminated / problematic experiment	
+application_of_ALE_to_re-optimize_growth_performance_of_genome-reduced_strain_MS56-M9-MG1655gbk	equals	yes	Genome-reduced (MS56) strain, problematic experiment	
+MG1655-delta-mutY	startswith	yes	Ecoli_resistance_norfloxacin project: engineered delta-mutY mutator background	
+MG1655_nor_	startswith	yes	Ecoli_resistance_norfloxacin project: wild-type norfloxacin controls of the delta-mutY series	
+MG1655_pBADmutS	startswith	yes	Engineered mutator background (inducible mutS)	
+delta_dnaQ	equals	yes	Engineered mutator background (dnaQ deletion, dnaQ is on the hypermutator gene list)	
+W3110_Benzoate_Tolerization_in_LBK	equals	yes	Cross-contamination between microplate wells documented in the source paper (Creamer et al. 2017, AEM 83:e02736-16)	
+pgi	equals	yes	Inoculum variants not captured by the sequenced starting strain	
+antibiotic_doxycycline	equals	yes	Adaptation is an rrn operon copy-number change (source study), which a gene-level binary matrix cannot represent	
+LTEE_Ara	equals	yes	Duplicate deposit of LTEE_ARA	

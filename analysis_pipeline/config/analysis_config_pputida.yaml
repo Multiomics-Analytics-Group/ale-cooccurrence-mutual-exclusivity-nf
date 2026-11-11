@@ -1,0 +1,45 @@
+# =====================================================================
+# Pairwise co-occurrence / mutual-exclusivity analysis configuration
+# (DISCOVER + Fisher + Pearson on a shared binary matrix).
+# Relative paths are read from the folder the analysis is started in. The scripts in
+# analysis_pipeline/scripts move to the repository folder themselves.
+#
+# The analysis is UNIT-AGNOSTIC: the test unit is defined only by unit_col.
+# There is no gene/operon switch anywhere. To test another unit, such as operons,
+# add its column to the input table, point unit_col at it and set unit_name accordingly.
+#
+# The code holds no default values. The pipeline stops when a setting it reads is missing,
+# has the wrong kind of value or a number out of range, or names something the data does not
+# have. A path that does not exist stops the step that reads it.
+# For none, write "" where a setting allows empty text.
+# =====================================================================
+
+# Input: the final table of the QC pipeline, qc_mutations.tsv in its run folder.
+input_table: output/qc/pputida/qc_mutations.tsv   # the QC pipeline output (run the QC pipeline first)
+
+# Name of this run. Every output goes to output/analysis/<run_name>/, the matrices to
+# its matrices/ folder. Give each configuration its own name.
+run_name: pputida
+
+# Column mapping into the generic matrix.
+sample_col: sample_endpoint        # unique sample identifier
+unit_col: Gene_name_normalized     # test unit, one matrix row per value (here the gene name)
+unit_name: gene                    # explicit tag used in output filenames (<unit_tag>)
+exp_col: exp                       # experiment column
+members_col: ""                    # column with the member genes of a composite unit. "" = atomic unit
+
+# Matrix orientation is fixed and documented: rows = test units, columns = samples.
+
+# Analysis parameters.
+min_endpoints: 2                   # per-experiment runs: experiments need at least this many samples
+fixed_min_count: 2                 # a unit is tested when it is mutated in at least this many samples
+# Significance threshold (strict "<"), used for two cutoffs:
+#   testability:  a pair is tested in a direction only if its smallest attainable p-value is below it
+#   significance: a tested pair is significant if its q-value is below it
+# One value for both, so the testability filter never removes a pair that could be significant.
+significance_threshold: 0.05
+# DISCOVER FDR method, applied within each direction over only the testable pairs:
+#   BH  = standard Benjamini-Hochberg
+#   DBH = DISCOVER's discrete Benjamini-Hochberg (less conservative for discrete tests)
+# Fisher always uses BH.
+discover_fdr_method: BH

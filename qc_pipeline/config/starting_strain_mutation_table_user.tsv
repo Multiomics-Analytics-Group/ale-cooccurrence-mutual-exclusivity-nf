@@ -1,0 +1,91 @@
+exp	Reference Seq	Position	Mutation Type	Sequence Change	Details	Gene	reason
+42C_Tenaillon-Ara-_LTEE_strain_from_generation_2000-DM25-REL606gbk-stationary-42-Glucose0025-NH4Cl1-KH2PO49-MgSO405-O20	REL606	1329516	SNP	C→T	H33Y (CAC→TAC)	topA	listed in the user starting-strain table
+42C_Tenaillon-Ara-_LTEE_strain_from_generation_2000-DM25-REL606gbk-stationary-42-Glucose0025-NH4Cl1-KH2PO49-MgSO405-O20	REL606	1733297	INS	(CGTATGAA)1→2	coding (333/1413 nt)	pykF	listed in the user starting-strain table
+42C_Tenaillon-Ara-_LTEE_strain_from_generation_2000-DM25-REL606gbk-stationary-42-Glucose0025-NH4Cl1-KH2PO49-MgSO405-O20	REL606	2193779	SNP	G→T	L143I (CTT→ATT)	yeiB	listed in the user starting-strain table
+42C_Tenaillon-Ara-_LTEE_strain_from_generation_2000-DM25-REL606gbk-stationary-42-Glucose0025-NH4Cl1-KH2PO49-MgSO405-O20	REL606	3762741	SNP	A→T	K662I (AAA→ATA)	spoT	listed in the user starting-strain table
+42C_Tenaillon-Ara-_LTEE_strain_from_generation_2000-DM25-REL606gbk-stationary-42-Glucose0025-NH4Cl1-KH2PO49-MgSO405-O20	REL606	3875632	INS	(T)7→8	intergenic (‑66/+287)	glmU/atpC	listed in the user starting-strain table
+42C_Tenaillon-Ara-_LTEE_strain_from_generation_2000-DM25-REL606gbk-stationary-42-Glucose0025-NH4Cl1-KH2PO49-MgSO405-O20	REL606	4524522	MOB	IS186 (+) +6 bp	coding (494‑499/549 nt)	fimA	listed in the user starting-strain table
+MG1655-delta-mutY_H2O2_20mM	NC_000913	889923	SNP	A→G	intergenic (‑104/‑166)	ybjL/ybjM	listed in the user starting-strain table
+MG1655-delta-mutY_H2O2_20mM	NC_000913	1678604	SNP	G→T	A60S (GCA→TCA)	ydgH	listed in the user starting-strain table
+MG1655-delta-mutY_H2O2_20mM	NC_000913	1879829	MOB	Δ1 bp :: IS186 (–) +6 bp :: Δ1 bp	coding (115‑120/360 nt)	yeaR	listed in the user starting-strain table
+MG1655-delta-mutY_H2O2_20mM	NC_000913	3354487	SNP	C→T	intergenic (‑437/‑238)	yhcC/gltB	listed in the user starting-strain table
+MG1655-delta-mutY_H2O2_20mM	NC_000913	3815883	INS	+C	coding (667/687 nt)	rph	listed in the user starting-strain table
+MG1655-delta-mutY_H2O2_20mM	NC_000913	4261710	SNP	C→A	S14R (AGC→AGA)	dusA	listed in the user starting-strain table
+MG1655-delta-mutY_nor_125	NC_000913	889923	SNP	A→G	intergenic (‑104/‑166)	ybjL/ybjM	listed in the user starting-strain table
+MG1655-delta-mutY_nor_125	NC_000913	1678604	SNP	G→T	A60S (GCA→TCA)	ydgH	listed in the user starting-strain table
+MG1655-delta-mutY_nor_125	NC_000913	1879829	MOB	Δ1 bp :: IS186 (–) +6 bp :: Δ1 bp	coding (115‑120/360 nt)	yeaR	listed in the user starting-strain table
+MG1655-delta-mutY_nor_125	NC_000913	3354487	SNP	C→T	intergenic (‑437/‑238)	yhcC/gltB	listed in the user starting-strain table
+MG1655-delta-mutY_nor_125	NC_000913	3815883	INS	+C	coding (667/687 nt)	rph	listed in the user starting-strain table
+MG1655-delta-mutY_nor_125	NC_000913	4261710	SNP	C→A	S14R (AGC→AGA)	dusA	listed in the user starting-strain table
+MG1655-delta-mutY_nor_25	NC_000913	889923	SNP	A→G	intergenic (‑104/‑166)	ybjL/ybjM	listed in the user starting-strain table
+MG1655-delta-mutY_nor_25	NC_000913	1678604	SNP	G→T	A60S (GCA→TCA)	ydgH	listed in the user starting-strain table
+MG1655-delta-mutY_nor_25	NC_000913	1879829	MOB	Δ1 bp :: IS186 (–) +6 bp :: Δ1 bp	coding (115‑120/360 nt)	yeaR	listed in the user starting-strain table
+MG1655-delta-mutY_nor_25	NC_000913	3354487	SNP	C→T	intergenic (‑437/‑238)	yhcC/gltB	listed in the user starting-strain table
+MG1655-delta-mutY_nor_25	NC_000913	3815883	INS	+C	coding (667/687 nt)	rph	listed in the user starting-strain table
+MG1655-delta-mutY_nor_25	NC_000913	4261710	SNP	C→A	S14R (AGC→AGA)	dusA	listed in the user starting-strain table
+MG1655-delta-mutY_nor_3125	NC_000913	889923	SNP	A→G	intergenic (‑104/‑166)	ybjL/ybjM	listed in the user starting-strain table
+MG1655-delta-mutY_nor_3125	NC_000913	1678604	SNP	G→T	A60S (GCA→TCA)	ydgH	listed in the user starting-strain table
+MG1655-delta-mutY_nor_3125	NC_000913	1879829	MOB	Δ1 bp :: IS186 (–) +6 bp :: Δ1 bp	coding (115‑120/360 nt)	yeaR	listed in the user starting-strain table
+MG1655-delta-mutY_nor_3125	NC_000913	3354487	SNP	C→T	intergenic (‑437/‑238)	yhcC/gltB	listed in the user starting-strain table
+MG1655-delta-mutY_nor_3125	NC_000913	3815883	INS	+C	coding (667/687 nt)	rph	listed in the user starting-strain table
+MG1655-delta-mutY_nor_3125	NC_000913	4261710	SNP	C→A	S14R (AGC→AGA)	dusA	listed in the user starting-strain table
+MG1655-delta-mutY_nor_375	NC_000913	889923	SNP	A→G	intergenic (‑104/‑166)	ybjL/ybjM	listed in the user starting-strain table
+MG1655-delta-mutY_nor_375	NC_000913	1678604	SNP	G→T	A60S (GCA→TCA)	ydgH	listed in the user starting-strain table
+MG1655-delta-mutY_nor_375	NC_000913	1879829	MOB	Δ1 bp :: IS186 (–) +6 bp :: Δ1 bp	coding (115‑120/360 nt)	yeaR	listed in the user starting-strain table
+MG1655-delta-mutY_nor_375	NC_000913	3354487	SNP	C→T	intergenic (‑437/‑238)	yhcC/gltB	listed in the user starting-strain table
+MG1655-delta-mutY_nor_375	NC_000913	3815883	INS	+C	coding (667/687 nt)	rph	listed in the user starting-strain table
+MG1655-delta-mutY_nor_375	NC_000913	4261710	SNP	C→A	S14R (AGC→AGA)	dusA	listed in the user starting-strain table
+MG1655-delta-mutY_nor_50	NC_000913	889923	SNP	A→G	intergenic (‑104/‑166)	ybjL/ybjM	listed in the user starting-strain table
+MG1655-delta-mutY_nor_50	NC_000913	1678604	SNP	G→T	A60S (GCA→TCA)	ydgH	listed in the user starting-strain table
+MG1655-delta-mutY_nor_50	NC_000913	1879829	MOB	Δ1 bp :: IS186 (–) +6 bp :: Δ1 bp	coding (115‑120/360 nt)	yeaR	listed in the user starting-strain table
+MG1655-delta-mutY_nor_50	NC_000913	3354487	SNP	C→T	intergenic (‑437/‑238)	yhcC/gltB	listed in the user starting-strain table
+MG1655-delta-mutY_nor_50	NC_000913	3815883	INS	+C	coding (667/687 nt)	rph	listed in the user starting-strain table
+MG1655-delta-mutY_nor_50	NC_000913	4261710	SNP	C→A	S14R (AGC→AGA)	dusA	listed in the user starting-strain table
+MG1655-delta-mutY_nor_75	NC_000913	889923	SNP	A→G	intergenic (‑104/‑166)	ybjL/ybjM	listed in the user starting-strain table
+MG1655-delta-mutY_nor_75	NC_000913	1678604	SNP	G→T	A60S (GCA→TCA)	ydgH	listed in the user starting-strain table
+MG1655-delta-mutY_nor_75	NC_000913	1879829	MOB	Δ1 bp :: IS186 (–) +6 bp :: Δ1 bp	coding (115‑120/360 nt)	yeaR	listed in the user starting-strain table
+MG1655-delta-mutY_nor_75	NC_000913	3354487	SNP	C→T	intergenic (‑437/‑238)	yhcC/gltB	listed in the user starting-strain table
+MG1655-delta-mutY_nor_75	NC_000913	3815883	INS	+C	coding (667/687 nt)	rph	listed in the user starting-strain table
+MG1655-delta-mutY_nor_75	NC_000913	4261710	SNP	C→A	S14R (AGC→AGA)	dusA	listed in the user starting-strain table
+MG1655-delta-mutY_nor_875	NC_000913	889923	SNP	A→G	intergenic (‑104/‑166)	ybjL/ybjM	listed in the user starting-strain table
+MG1655-delta-mutY_nor_875	NC_000913	1678604	SNP	G→T	A60S (GCA→TCA)	ydgH	listed in the user starting-strain table
+MG1655-delta-mutY_nor_875	NC_000913	1879829	MOB	Δ1 bp :: IS186 (–) +6 bp :: Δ1 bp	coding (115‑120/360 nt)	yeaR	listed in the user starting-strain table
+MG1655-delta-mutY_nor_875	NC_000913	3354487	SNP	C→T	intergenic (‑437/‑238)	yhcC/gltB	listed in the user starting-strain table
+MG1655-delta-mutY_nor_875	NC_000913	3815883	INS	+C	coding (667/687 nt)	rph	listed in the user starting-strain table
+MG1655-delta-mutY_nor_875	NC_000913	4261710	SNP	C→A	S14R (AGC→AGA)	dusA	listed in the user starting-strain table
+MG1655-delta-mutY_untreated	NC_000913	889923	SNP	A→G	intergenic (‑104/‑166)	ybjL/ybjM	listed in the user starting-strain table
+MG1655-delta-mutY_untreated	NC_000913	1678604	SNP	G→T	A60S (GCA→TCA)	ydgH	listed in the user starting-strain table
+MG1655-delta-mutY_untreated	NC_000913	1879829	MOB	Δ1 bp :: IS186 (–) +6 bp :: Δ1 bp	coding (115‑120/360 nt)	yeaR	listed in the user starting-strain table
+MG1655-delta-mutY_untreated	NC_000913	3354487	SNP	C→T	intergenic (‑437/‑238)	yhcC/gltB	listed in the user starting-strain table
+MG1655-delta-mutY_untreated	NC_000913	3815883	INS	+C	coding (667/687 nt)	rph	listed in the user starting-strain table
+MG1655-delta-mutY_untreated	NC_000913	4261710	SNP	C→A	S14R (AGC→AGA)	dusA	listed in the user starting-strain table
+MG1655_nor_125	NC_000913	889923	SNP	A→G	intergenic (‑104/‑166)	ybjL/ybjM	listed in the user starting-strain table
+MG1655_nor_125	NC_000913	1879829	MOB	Δ1 bp :: IS186 (–) +6 bp :: Δ1 bp	coding (115‑120/360 nt)	yeaR	listed in the user starting-strain table
+MG1655_nor_125	NC_000913	3354487	SNP	C→T	intergenic (‑437/‑238)	yhcC/gltB	listed in the user starting-strain table
+MG1655_nor_125	NC_000913	3815883	INS	+C	coding (667/687 nt)	rph	listed in the user starting-strain table
+MG1655_nor_25	NC_000913	889923	SNP	A→G	intergenic (‑104/‑166)	ybjL/ybjM	listed in the user starting-strain table
+MG1655_nor_25	NC_000913	1879829	MOB	Δ1 bp :: IS186 (–) +6 bp :: Δ1 bp	coding (115‑120/360 nt)	yeaR	listed in the user starting-strain table
+MG1655_nor_25	NC_000913	3354487	SNP	C→T	intergenic (‑437/‑238)	yhcC/gltB	listed in the user starting-strain table
+MG1655_nor_25	NC_000913	3815883	INS	+C	coding (667/687 nt)	rph	listed in the user starting-strain table
+MG1655_nor_375	NC_000913	889923	SNP	A→G	intergenic (‑104/‑166)	ybjL/ybjM	listed in the user starting-strain table
+MG1655_nor_375	NC_000913	1879829	MOB	Δ1 bp :: IS186 (–) +6 bp :: Δ1 bp	coding (115‑120/360 nt)	yeaR	listed in the user starting-strain table
+MG1655_nor_375	NC_000913	3354487	SNP	C→T	intergenic (‑437/‑238)	yhcC/gltB	listed in the user starting-strain table
+MG1655_nor_375	NC_000913	3815883	INS	+C	coding (667/687 nt)	rph	listed in the user starting-strain table
+MG1655_nor_50	NC_000913	889923	SNP	A→G	intergenic (‑104/‑166)	ybjL/ybjM	listed in the user starting-strain table
+MG1655_nor_50	NC_000913	1879829	MOB	Δ1 bp :: IS186 (–) +6 bp :: Δ1 bp	coding (115‑120/360 nt)	yeaR	listed in the user starting-strain table
+MG1655_nor_50	NC_000913	3354487	SNP	C→T	intergenic (‑437/‑238)	yhcC/gltB	listed in the user starting-strain table
+MG1655_nor_50	NC_000913	3815883	INS	+C	coding (667/687 nt)	rph	listed in the user starting-strain table
+MG1655_nor_625	NC_000913	889923	SNP	A→G	intergenic (‑104/‑166)	ybjL/ybjM	listed in the user starting-strain table
+MG1655_nor_625	NC_000913	1879829	MOB	Δ1 bp :: IS186 (–) +6 bp :: Δ1 bp	coding (115‑120/360 nt)	yeaR	listed in the user starting-strain table
+MG1655_nor_625	NC_000913	3354487	SNP	C→T	intergenic (‑437/‑238)	yhcC/gltB	listed in the user starting-strain table
+MG1655_nor_625	NC_000913	3815883	INS	+C	coding (667/687 nt)	rph	listed in the user starting-strain table
+MG1655_nor_75	NC_000913	889923	SNP	A→G	intergenic (‑104/‑166)	ybjL/ybjM	listed in the user starting-strain table
+MG1655_nor_75	NC_000913	1879829	MOB	Δ1 bp :: IS186 (–) +6 bp :: Δ1 bp	coding (115‑120/360 nt)	yeaR	listed in the user starting-strain table
+MG1655_nor_75	NC_000913	3354487	SNP	C→T	intergenic (‑437/‑238)	yhcC/gltB	listed in the user starting-strain table
+MG1655_nor_75	NC_000913	3815883	INS	+C	coding (667/687 nt)	rph	listed in the user starting-strain table
+MG1655_nor_875	NC_000913	889923	SNP	A→G	intergenic (‑104/‑166)	ybjL/ybjM	listed in the user starting-strain table
+MG1655_nor_875	NC_000913	1879829	MOB	Δ1 bp :: IS186 (–) +6 bp :: Δ1 bp	coding (115‑120/360 nt)	yeaR	listed in the user starting-strain table
+MG1655_nor_875	NC_000913	3354487	SNP	C→T	intergenic (‑437/‑238)	yhcC/gltB	listed in the user starting-strain table
+MG1655_nor_875	NC_000913	3815883	INS	+C	coding (667/687 nt)	rph	listed in the user starting-strain table
+pgiPAE	NC_000913_3_pae_pgi	1529218	SNP	C→T	pseudogene (1317/2037 nt)	rhsE	listed in the user starting-strain table
+tpiHSA	NC_000913_3_hsa_tpiA	4111662	SNP	G→A	L179L (CTG→TTG)	yiiQ	listed in the user starting-strain table
