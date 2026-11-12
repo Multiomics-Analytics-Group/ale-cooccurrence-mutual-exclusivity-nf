@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+type: software
+title: "ale-cooccurrence-nf: ALEdb mutation QC and gene co-occurrence analysis"
+authors:
+  - given-names: Binhuan
+    family-names: Sun
+  - given-names: Adam M.
+    family-names: Feist
+  - given-names: Patrick V.
+    family-names: Phaneuf
+  - given-names: Alberto
+    family-names: Santos
+repository-code: "https://github.com/Multiomics-Analytics-Group/ale-cooccurrence-nf"
+license: MIT
+abstract: >-
+  A Nextflow pipeline, run in one Docker image, for the mutation calls of
+  adaptive laboratory evolution (ALE) experiments exported from ALEdb. It cleans
+  the calls into one table of endpoint mutations. It then tests, within each
+  experiment, pairs of mutated genes for co-occurrence and mutual exclusivity
+  with DISCOVER and with Fisher's exact test.
+keywords:
+  - adaptive laboratory evolution
+  - ALEdb
+  - co-occurrence
+  - mutual exclusivity
+  - Nextflow

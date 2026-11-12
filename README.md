@@ -35,7 +35,8 @@ is reported without a test.
 ## Requirements
 
 - Nextflow 26.04 or later, which needs Java 17 or later
-- Docker, usable by the user who starts Nextflow
+- Docker, usable by the user who starts Nextflow. On a Mac, start Docker Desktop before you build
+  the image or start a run.
 - An x86-64 machine, or a Mac with Apple silicon, where Docker Desktop runs the x86-64 image
   through emulation. The machine needs more than 8 GB of total memory: the first QC step asks for
   8 GB, and Nextflow stops a run with a task that asks for more memory than the machine has. The
@@ -66,6 +67,13 @@ is reported without a test.
 `md5sum -c --quiet data.md5`: it prints only the files that differ or are missing, and nothing
 when all match. It does not report files that it does not list, so unpack `data.tar.gz` where no
 earlier `data/` folder exists.
+
+If your Mac has no `md5sum` (macOS 14 and earlier), this loop does the same check, from the
+repository folder:
+
+```bash
+while read -r sum file; do [ "$(md5 -q "$file")" = "$sum" ] || echo "$file"; done < data.md5
+```
 
 The E. coli settings are in `qc_pipeline/config/qc_config.yaml`, with its tables in
 `qc_pipeline/config/` (starting-strain mutations, hypermutator genes, excluded experiments), and
@@ -117,9 +125,9 @@ The two runs are independent and can run in either order, one at a time. They wr
 folders under `results/`. Each QC step and the analysis run as one task in the image, as the user
 who started Nextflow. Each task uses one CPU. The QC steps run one after another, and only the
 report step and the analysis run at the same time, so more than two CPUs do not shorten a run. The
-E. coli run takes about 2 minutes on a Linux server and longer on an Apple M1 Pro
+E. coli run takes about 2 minutes on a Linux server and about 2.5 minutes on an Apple M1 Pro
 laptop, where Docker runs the x86-64 image through emulation. The P. putida run takes less than a
-minute on the same server.
+minute on both.
 
 Start Nextflow in the repository folder, since relative paths in the params file and in the
 configs are read from the folder it is started in.
@@ -296,6 +304,17 @@ OMP_NUM_THREADS=1 MKL_THREADING_LAYER=GNU PATH="$HOME/envs/ale-cooccurrence/bin:
 
 In this run, `n_input_rows` of the experiment summaries counts the rows of that table, one per
 gene and endpoint, not mutations.
+
+## How to cite
+
+This pipeline is described in the article
+
+> A statistical framework for identifying candidate genetic interactions from adaptive laboratory
+> evolution data.
+> Binhuan Sun, Adam M. Feist, Patrick V. Phaneuf, Alberto Santos.
+
+If you use it, please cite the article and this pipeline (`CITATION.cff` gives its citation data).
+Please also cite ALEdb and STRING as given under Data sources and citations.
 
 ## Data sources and citations
 
