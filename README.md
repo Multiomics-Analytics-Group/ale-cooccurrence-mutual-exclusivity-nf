@@ -349,9 +349,10 @@ The included code keeps its own license:
   `qc_pipeline/mutil/LICENSE`.
 - `docker/vendor/discover-0.9.6-py312h3866932_0.conda` is the unmodified conda package of
   DISCOVER 0.9.6 by Sander Canisius, Netherlands Cancer Institute
-  (http://ccb.nki.nl/software/discover), Apache License 2.0. See `docker/vendor/SOURCE.txt` and
-  `docker/vendor/LICENSE-Apache-2.0.txt`, which the image also holds in
-  `/opt/env/share/licenses/discover/`.
+  (http://ccb.nki.nl/software/discover, source code at
+  https://github.com/NKI-CCB/DISCOVER/tree/py_v0.9.6), Apache License 2.0. See
+  `docker/vendor/SOURCE.txt` and `docker/vendor/LICENSE-Apache-2.0.txt`, which the image also
+  holds in `/opt/env/share/licenses/discover/`.
 
 The STRING alias files in `data.tar.gz` are under the Creative Commons Attribution 4.0 license
 (CC BY 4.0, https://creativecommons.org/licenses/by/4.0/), as given under Data sources and

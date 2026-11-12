@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it using the metadata from this file."
 type: software
-title: "ale-cooccurrence-nf: ALEdb mutation QC and gene co-occurrence analysis"
+title: "ale-cooccurrence-mutual-exclusivity-nf: ALEdb mutation QC and gene co-occurrence analysis"
 authors:
   - given-names: Binhuan
     family-names: Sun
@@ -11,7 +11,7 @@ authors:
     family-names: Phaneuf
   - given-names: Alberto
     family-names: Santos
-repository-code: "https://github.com/Multiomics-Analytics-Group/ale-cooccurrence-nf"
+repository-code: "https://github.com/Multiomics-Analytics-Group/ale-cooccurrence-mutual-exclusivity-nf"
 license: MIT
 abstract: >-
   A Nextflow pipeline, run in one Docker image, for the mutation calls of
